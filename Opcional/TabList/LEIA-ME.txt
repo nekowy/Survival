@@ -1,0 +1,10 @@
+INSTALE PELO LINK: https://aternos.org/addons/a/spigot/110126
+E DEPOIS A DEPENDÊNCIA: https://aternos.org/addons/a/hangar/PlaceholderAPI
+
+COM O SERVIDOR INICIADO, RODE OS 3 COMANDOS:
+- /papi ecloud download player
+- /papi ecloud download server
+- /papi ecloud download animations
+
+E COPIE O CONFIG.TXT PARA:
+plugins/TabPlugin/settings.yml

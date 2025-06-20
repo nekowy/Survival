@@ -1,0 +1,11 @@
+INSTALE PELO LINK: https://aternos.org/addons/a/bukkit/authme-reloaded
+
+DEPOIS COPIE A CONFIG.TXT PARA O ARQUIVO:
+plugins/AuthMe/config.yml
+
+TRADUÇÕES:
+COPIE TRADUÇÕES_HELP.TXT PARA:
+plugins/AuthMe/messages/help_en.yml
+
+DEPOIS TRADUÇÕES.TXT PARA:
+plugins/AuthMe/messages/messages_en.yml

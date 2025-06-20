@@ -1,0 +1,2 @@
+&6Bom dia, {PLAYER}&6!
+&9Jogadores online:&c {ONLINE}

@@ -1,0 +1,7 @@
+INSTALE PELO LINK: https://aternos.org/addons/a/artemis-bukkit/geyser
+
+COPIE CONFIG.TXT PARA:
+plugins/Geyser-Spigot/config.yml
+
+COPIE FLOODGATE.TXT PARA:
+plugins/floodgate/config.yml

@@ -1,0 +1,31 @@
+common:
+    header: '==========[ AuthMeReloaded HELP ]=========='
+    optional: 'Opcional'
+    hasPermission: 'Você tem permissão'
+    noPermission: 'Sem permissão'
+    default: 'Default'
+    result: 'Result'
+    defaultPermissions:
+        notAllowed: 'Sem permissão'
+        opOnly: 'OPs somente'
+        allowed: 'Todos Permitidos'
+
+section:
+    command: 'Comando'
+    description: 'Descrição curta'
+    detailedDescription: 'Descrição detalhada'
+    arguments: 'Argumentos'
+    permissions: 'Permissões'
+    alternatives: 'Alternativas'
+    children: 'Comandos'
+
+commands:
+    authme.register:
+        description: 'Registra um jogador'
+        detailedDescription: 'Registra o jogador com a senha especificada.'
+        arg1:
+            label: 'player'
+            description: 'Nome do Jogador'
+        arg2:
+            label: 'password'
+            description: 'Senha'

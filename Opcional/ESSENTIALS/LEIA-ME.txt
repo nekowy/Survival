@@ -1,0 +1,9 @@
+INSTALE PELO LINK: https://aternos.org/addons/a/artemis-bukkit/essentialsx
+CHAT(OPCIONAL): https://aternos.org/addons/a/artemis-bukkit/essentialsx-chat
+
+
+COPIE CONFIG.TXT PARA:
+plugins/Essentials/config.yml
+
+DEPOIS COPIE MOTD.TXT PARA:
+plugins/Essentials/motd.txt

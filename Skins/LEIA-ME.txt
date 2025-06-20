@@ -1,0 +1,4 @@
+INSTALE PELO LINK: https://aternos.org/addons/a/modrinthbukkit/TsLS8Py5
+
+COPIE O CONFIG.TXT PARA:
+plugins/SkinsRestorer/config.yml

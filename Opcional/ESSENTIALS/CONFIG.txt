@@ -1,0 +1,272 @@
+ops-name-color: '9'
+nickname-prefix: '*'
+max-nick-length: 16
+allowed-nicks-regex: '^[a-zA-Z_0-9]+$'
+nick-blacklist: []
+ignore-colors-in-max-nick-length: true
+hide-displayname-in-vanish: true
+change-displayname: true
+change-tab-complete-name: true
+change-playerlist: true
+teleport-safety: true
+force-disable-teleport-safety: false
+teleport-passenger-dismount: true
+teleport-cooldown: 5
+teleport-delay: 3
+teleport-invulnerability: 4
+teleport-to-center: true
+heal-cooldown: 60
+remove-effects-on-heal: true
+near-radius: 100
+item-spawn-blacklist: null
+permission-based-item-spawn: false
+spawnmob-limit: 10
+warn-on-smite: true
+drop-items-if-full: true
+notify-no-new-mail: true
+notify-player-of-mail-cooldown: 60
+overridden-commands: []
+disabled-commands:
+  - god
+  - fly
+  - speed
+  - heal
+  - feed
+  - repair
+  - ptime
+  - pweather
+  - eco
+  - sell
+  - balance
+  - balancetop
+  - pay
+  - item
+  - give
+  - spawnmob
+  - enchant
+  - clearinventory
+verbose-command-usages: true
+socialspy-commands:
+  - action
+  - describe
+  - eaction
+  - edescribe
+  - email
+  - eme
+  - emsg
+  - er
+  - ereply
+  - etell
+  - ewhisper
+  - m
+  - mail
+  - msg
+  - pm
+  - r
+  - reply
+  - t
+  - tell
+  - w
+  - whisper
+socialspy-listen-muted-players: true
+socialspy-messages: true
+socialspy-uses-displaynames: true
+world-change-fly-reset: true
+world-change-preserve-flying: true
+world-change-speed-reset: true
+mute-commands: []
+use-bukkit-permissions: true
+kit-auto-equip: false
+pastebin-createkit: false
+use-nbt-serialization-in-createkit: false
+enabledSigns:
+  - color
+  - mail
+sign-use-per-second: 4
+allow-old-id-signs: false
+unprotected-sign-names: []
+backup:
+  interval: 1440
+  always-run: true
+  command: null
+per-warp-permission: true
+list:
+  Players: '*'
+real-names-on-list: false
+debug: false
+locale: pt_BR
+per-player-locale: false
+message-colors:
+  primary: '#55aaff'
+  secondary: '#eeeeee'
+remove-god-on-disconnect: true
+auto-afk: 300
+auto-afk-kick: -1
+freeze-afk-players: false
+disable-item-pickup-while-afk: true
+cancel-afk-on-interact: true
+cancel-afk-on-move: true
+cancel-afk-on-chat: true
+sleep-ignores-afk-players: true
+sleep-ignores-vanished-player: true
+afk-list-name: none
+broadcast-afk-message: true
+death-messages: true
+vanishing-items-policy: keep
+binding-items-policy: keep
+send-info-after-death: true
+allow-silent-join-quit: true
+custom-join-message: none
+custom-quit-message: none
+custom-new-username-message: none
+use-custom-server-full-message: true
+hide-join-quit-messages-above: -1
+no-god-in-worlds: []
+world-teleport-permissions: false
+default-stack-size: -1
+oversized-stacksize: 64
+repair-enchanted: true
+unsafe-enchantments: false
+tree-command-range-limit: 300
+register-back-in-listener: false
+login-attack-delay: 5
+max-walk-speed: 0.8
+max-fly-speed: 0.8
+mails-per-minute: 1000
+max-mute-time: -1
+max-tempban-time: -1
+last-message-reply-recipient: true
+last-message-reply-recipient-timeout: 180
+last-message-reply-vanished: false
+milk-bucket-easter-egg: true
+send-fly-enable-on-join: true
+world-time-permissions: false
+command-cooldowns:
+  home: 60
+  tpa: 60
+  warp: 60
+command-cooldown-persistence: true
+npcs-in-balance-ranking: false
+allow-bulk-buy-sell: true
+allow-selling-named-items: false
+delay-motd: 0
+default-enabled-confirm-commands: []
+teleport-when-freed: back
+jail-online-time: false
+tpa-accept-cancellation: 120
+tpa-max-requests: 5
+allow-direct-hat: true
+allow-world-in-broadcastworld: true
+safe-usermap-names: true
+log-command-block-commands: true
+max-projectile-speed: 8
+max-itemlore-lines: 10
+update-check: true
+update-bed-at-daytime: true
+world-home-permissions: false
+sethome-multiple:
+  default: 1
+  vip: 3
+  mvp: 5
+compass-towards-home-perm: false
+spawn-if-no-home: true
+confirm-home-overwrite: true
+starting-balance: 0
+command-costs: {  }
+currency-symbol: ''
+currency-symbol-suffix: false
+max-money: 0
+min-money: 0
+economy-log-enabled: false
+economy-log-update-enabled: false
+minimum-pay-amount: 0.01
+pay-excludes-ignore-list: false
+show-zero-baltop: false
+baltop-requirements:
+  minimum-balance: 0
+  minimum-playtime: 0
+non-ess-in-help: true
+hide-permissionless-help: true
+chat:
+  radius: 0
+  format: '{DISPLAYNAME}&7: &r{MESSAGE}'
+  group-formats: {  }
+  world-aliases: {  }
+  shout-default: false
+  persist-shout: false
+  question-enabled: true
+  paper-chat-events: true
+protect:
+  prevent:
+    lava-flow: false
+    water-flow: false
+    water-bucket-flow: false
+    fire-spread: true
+    lava-fire-spread: true
+    flint-fire: false
+    portal-creation: false
+    tnt-explosion: false
+    creeper-explosion: false
+    creeper-blockdamage: true
+    enderdragon-blockdamage: true
+    enderman-pickup: false
+    villager-death: false
+    bed-explosion: false
+    zombie-door-break: false
+    ravager-thief: false
+    sheep-eat-grass: false
+    spawn:
+      creeper: false
+      skeleton: false
+      spider: false
+      zombie: false
+      slime: false
+      ghast: false
+      pig_zombie: false
+      enderman: false
+      cave_spider: false
+      silverfish: false
+      blaze: false
+      magma_cube: false
+      wither: false
+      phantom: false
+  disable:
+    fall: false
+    pvp: false
+    drown: false
+    suffocate: false
+    lavadmg: false
+    projectiles: false
+    contactdmg: false
+    firedmg: false
+    lightning: false
+    wither: false
+    weather:
+      storm: false
+      thunder: false
+      lightning: false
+    build: true
+    use: true
+    warn-on-build-disallow: true
+  alert:
+    on-placement: null
+    on-use: null
+    on-break: null
+  blacklist:
+    placement: null
+    usage: null
+    break: null
+    piston: null
+    dispenser: null
+newbies:
+  announce-format: '&dBem-vindo(a) {DISPLAYNAME}&d ao servidor!'
+  spawnpoint: newbies
+  kit: tools
+respawn-listener-priority: high
+spawn-join-listener-priority: high
+respawn-at-home: true
+respawn-at-home-bed: true
+respawn-at-anchor: true
+random-spawn-location: none
+random-respawn-location: none
+spawn-on-join: false

@@ -1,0 +1,7 @@
+force_voicechat_kick_message=Você precisa de %s %s para jogar neste servidor
+voicechat_not_compatible_message=Sua versão do cliente de chat de voz não é compatível com a versão do servidor.\nPor favor, instale a versão %s do %s.
+voicechat_needed_for_command_message=Você precisa ter %s instalado no seu cliente para usar este comando
+player_command_message=Este comando só pode ser executado por um jogador
+placeholder_api_voicechat_installed=
+placeholder_api_voicechat_not_installed=
+placeholder_api_voicechat_disabled=

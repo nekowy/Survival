@@ -1,0 +1,6 @@
+[INICIAR SERVIDOR PELA PRIMEIRA VEZ ANTES DE APLICAR CONFIGURAÇÃO]
+INSTALE ATRAVÉS DO LINK: https://aternos.org/addons/a/modrinthbukkit/O4o4mKaq
+
+COLE A CONFIGURAÇÃO DO ARQUIVO CONFIG.TXT NO ARQUIVO:
+plugins/GriefPreventionData/config.yml
+

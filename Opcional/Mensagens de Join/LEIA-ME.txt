@@ -1,0 +1,7 @@
+INSTALE PELO LINK: https://aternos.org/addons/a/modrinthbukkit/PJMIw5vh
+
+DEPOIS COPIE CONFIG.TXT PARA:
+plugins/CustomJoinMessages/config.yml
+
+DEPOIS COPIE MESSAGES.TXT PARA:
+plugins/CustomJoinMessages/messages/chat.yml

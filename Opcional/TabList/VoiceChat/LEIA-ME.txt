@@ -1,0 +1,7 @@
+INSTALE PELO LINK: https://aternos.org/addons/a/modrinthbukkit/9eGKb6K1
+
+DEPOIS COPIE CONFIG.TXT PARA:
+plugins/voicechat/voicechat-server.properties
+
+DEPOIS COPIE TRADUÇÕES.TXT PARA:
+plugins/voicechat/translations.properties

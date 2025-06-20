@@ -1,0 +1,34 @@
+# Toggles whether chat messages should be sent.
+Enabled: true
+
+Public:
+  # Whether public chat messages should be sent to the server's console.
+  Send-To-Console: true
+  First-Join:
+    1:
+      Permission: cjm.default
+      Radius: -1
+      Max-Players: -1
+      Messages:
+  Join:
+    1:
+      Permission: cjm.default
+      Messages:
+        1:
+          - "&8[&a+&8] &r%name%"
+  Quit:
+    1:
+      Permission: cjm.default
+      Messages:
+        1:
+          - "&8[&4-&8] &r%name%"
+
+Private:
+  First-Join:
+    1:
+      Permission: cjm.default
+      Messages:
+  Join:
+    1:
+      Permission: cjm.default
+      Messages:
