@@ -1,5 +1,5 @@
-ATENÇÃO: APLIQUE AS CONFIGURAÇÕES APÓS INICIAR O SERVIDOR PELA PRIMEIRA VEZ
-(INSTALE TODOS OS PLUGINS ANTES E DEPOIS AS CONFIGURAÇÕES, NÃO PERCA TEMPO)
+## ATENÇÃO: APLIQUE AS CONFIGURAÇÕES APÓS INICIAR O SERVIDOR PELA PRIMEIRA VEZ
+### (INSTALE TODOS OS PLUGINS ANTES E DEPOIS AS CONFIGURAÇÕES, NÃO PERCA TEMPO)
 
 Features:
 - Anti Grief (GriefPrevention)
@@ -13,6 +13,8 @@ Opcionais:
 - EssentialsX (Ferramentas para Administradores)
 - EssentialsX Chat (Coloca um tema básico pro chat com cores)
 - TabList com número de jogadores
-- Mensagens de Join menos chamativas
+- Mensagens de Join <- Acho um pouco inutil
+
+---
 
 Made with <3 by @Nekowy
