@@ -1,0 +1,4 @@
+Todos os arquivos estão na pasta home do servidor
+Ou seja, estão disponiveis diretamente sem acessar nenhum subdiretório
+
+CONFIRME QUE SUA WHITELIST ESTÁ **DESATIVADA** NA CONFIGURAÇÃO DO SERVIDOR, USE O SIMPLEWHITELIST

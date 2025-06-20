@@ -2,3 +2,8 @@ INSTALE PELO LINK: https://aternos.org/addons/a/modrinthbukkit/mGVcEBwo
 
 APLIQUE A TRADUÇÃO(OPCIONAL) DO ARQUIVO CONFIG.TXT NO ARQUIVO:
 plguins/simplewhitelist/config.json
+
+
+PARA ATIVAR, EXECUTE /swl enable
+ADCIONAR PLAYER: /swl add <player>
+REMOVER PLAYER: /swl remove <player>

@@ -1,0 +1,2 @@
+COPIE O CONFIG.TXT PARA:
+config/paper-world-defaults.yml
