@@ -1,0 +1,7 @@
+INSTALE PELO LINK: https://aternos.org/addons/a/hangar/SimpleVoiceChat
+
+COPIE O CONFIG.TXT PARA:
+plugins/voicechat/voicechat-server.properties
+
+COPIE O TRADUÇÕES.TXT PARA:
+plugins/voicechat/translations.properties
