@@ -35,7 +35,7 @@ GriefPrevention:
     MinimumArea: 100
     MaximumDepth: -2147483648
     InvestigationTool: STICK
-    ModificationTool: GOLDEN_SHOVEL
+    ModificationTool: WOODEN_SHOVEL
     Expiration:
       ChestClaimDays: 7
       UnusedClaimDays: 14
