@@ -1,0 +1,6 @@
+INSTALE PELO LINK: https://aternos.org/addons/a/modrinthbukkit/9cgarzL8
+
+COPIE A CONFIG.TXT PARA:
+plugins/LightAntiCheat/config.yml
+
+OBS: Punições DEPENDEM do "BANS"

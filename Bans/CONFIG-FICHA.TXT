@@ -1,0 +1,263 @@
+# Retribution - Um Addon do AdvancedBan por RossRao
+#
+# Placeholders (Variáveis)
+# %player% = Nome do jogador
+#
+# Materiais Disponíveis: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Material.html
+# Sons Disponíveis: https://hub.spigotmc.org/javadocs/bukkit/org/bukkit/Sound.html
+#
+
+Invalid_Argument: '&cEste argumento não existe...'
+Unknown_Player: '&cJogador não encontrado.'
+No_Punishments: '&cEste jogador não possui punições...'
+No_Permission: '&cVocê não tem permissão para fazer isso!'
+Unknown_Punishment: '&cPunição não encontrada!'
+
+Deleted_Punishment: '&aVocê deletou a punição %id%!'
+Cleared_Punishments: '&aVocê limpou as punições de %player%!'
+
+Reloaded: '&aRetribution foi recarregado!'
+
+Help_Command:
+  - ''
+  - '&a&lComandos do Retribution:'
+  - ' &a- /history <jogador> &7- Ver o histórico de punições de um jogador.'
+  - ' &a- /retribution reload &7- Recarregar a configuração.'
+  - ' &a- /retribution help &7- Exibe esta mensagem de ajuda.'
+  - ' &a- /retribution delete <id> &7- Deleta uma punição do histórico.'
+  - ' &a- /retribution clear <jogador> &7- Limpa o histórico de punições de um jogador.'
+  - ''
+
+Sounds:
+  Open_History: 'ENTITY_VILLAGER_YES'
+  Switch_Sort: 'BLOCK_WOODEN_BUTTON_CLICK_ON'
+  Switch_Filter: 'BLOCK_WOODEN_BUTTON_CLICK_ON'
+
+Revoke:
+  Revoke_Message: '&aVocê revogou a punição %id% de %player%!'
+  Lore_Addon:
+    - '&8---------------------------'
+    - '&aClique para revogar esta punição!'
+
+Menus:
+  History:
+    Title: 'Punições de %player%'
+    Rows: 6
+    Background:
+      Material: 'GREEN_STAINED_GLASS_PANE'
+      Glowing: false
+      Name: '&r'
+      Lore: []
+      Slots:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 5
+        - 6
+        - 7
+        - 8
+        - 9
+        - 17
+        - 18
+        - 26
+        - 27
+        - 35
+        - 36
+        - 44
+        - 46
+        - 47
+        - 51
+        - 52
+    Close:
+      Material: 'BARRIER'
+      Glowing: false
+      Slot: 49
+      Name: '&cFechar Menu'
+      Lore: []
+    Player:
+      Material: 'PLAYER_HEAD'
+      Glowing: false
+      isPunishedsHead: true
+      Slot: 4
+      Name: '&aHistórico de %player%'
+      Lore:
+        - ''
+        - '&a&lPunições:'
+        - ' &2- %total_punishments% Punições Totais'
+        - ''
+    Sort_All:
+      Material: 'LIME_DYE'
+      Glowing: true
+      Slot: 50
+      Name: '&a&lOrdenar por: &fTodas'
+      Lore:
+        - ''
+        - '&7Ordenando por: &f%sort%'
+        - ''
+        - '&eClique para alterar!'
+    Sort_Active:
+      Material: 'GRAY_DYE'
+      Glowing: false
+      Name: '&a&lOrdenar por: &2Ativas'
+      Lore:
+        - ''
+        - '&7Ordenando por: &f%sort%'
+        - ''
+        - '&eClique para alterar!'
+    Filter:
+      Material: HOPPER
+      Glowing: false
+      Slot: 48
+      Name: '&a&lFiltrar Punições'
+      Lore:
+        - ''
+        - '&7Filtrando por: &f%filter%'
+        - ''
+        - '&eClique para alterar o filtro!'
+    Next_Page:
+      Material: 'ARROW'
+      Glowing: false
+      Slot: 53
+      Name: '&aPróxima Página'
+      Lore: []
+    Previous_Page:
+      Material: 'ARROW'
+      Glowing: false
+      Slot: 45
+      Name: '&cPágina Anterior'
+      Lore: []
+    BAN:
+      Material: 'IRON_AXE'
+      Glowing: false
+      Name: '&4&lBANIMENTO&r &8[&7ID-%id%&8]'
+      Lore:
+        - ''
+        - '&f&lInformações:'
+        - ' &7- Motivo: &f%reason%'
+        - ' &7- Staff: &f%staff%'
+        - ' &7- Data da Punição:'
+        - '   &f%date%'
+        - ''
+    TEMP_BAN:
+      Material: 'GOLDEN_AXE'
+      Glowing: false
+      Name: '&c&lBAN. TEMPORÁRIO&r &8[&7ID-%id%&8]'
+      Lore:
+        - ''
+        - '&f&lInformações:'
+        - ' &7- Motivo: &f%reason%'
+        - ' &7- Staff: &f%staff%'
+        - ' &7- Duração: &f%duration%'
+        - ' &7- Data da Punição:'
+        - '   &f%date%'
+        - ' &7- Data de Expiração:'
+        - '   &f%expiry%'
+        - ''
+    KICK:
+      Material: 'GOLDEN_BOOTS'
+      Glowing: false
+      Name: '&6&lEXPULSÃO&r &8[&7ID-%id%&8]'
+      Lore:
+        - ''
+        - '&f&lInformações:'
+        - ' &7- Motivo: &f%reason%'
+        - ' &7- Staff: &f%staff%'
+        - ' &7- Data da Punição:'
+        - '   &f%date%'
+        - ''
+    MUTE:
+      Material: 'GRAY_DYE'
+      Glowing: false
+      Name: '&5&lSILENCIAMENTO&r &8[&7ID-%id%&8]'
+      Lore:
+        - ''
+        - '&f&lInformações:'
+        - ' &7- Motivo: &f%reason%'
+        - ' &7- Staff: &f%staff%'
+        - ' &7- Data da Punição:'
+        - '   &f%date%'
+        - ''
+    TEMP_MUTE:
+      Material: 'ORANGE_DYE'
+      Glowing: false
+      Name: '&d&lSIL. TEMPORÁRIO&r &8[&7ID-%id%&8]'
+      Lore:
+        - ''
+        - '&f&lInformações:'
+        - ' &7- Motivo: &f%reason%'
+        - ' &7- Staff: &f%staff%'
+        - ' &7- Duração: &f%duration%'
+        - ' &7- Data da Punição:'
+        - '   &f%date%'
+        - ' &7- Data de Expiração:'
+        - '   &f%expiry%'
+        - ''
+    IP_BAN:
+      Material: 'BARRIER'
+      Glowing: false
+      Name: '&4&lBANIMENTO DE IP&r &8[&7ID-%id%&8]'
+      Lore:
+        - ''
+        - '&f&lInformações:'
+        - ' &7- Motivo: &f%reason%'
+        - ' &7- Staff: &f%staff%'
+        - ' &7- Data da Punição:'
+        - '   &f%date%'
+        - ''
+    TEMP_IP_BAN:
+      Material: 'BARRIER'
+      Glowing: false
+      Name: '&c&lBAN. DE IP TEMP.&r &8[&7ID-%id%&8]'
+      Lore:
+        - ''
+        - '&f&lInformações:'
+        - ' &7- Motivo: &f%reason%'
+        - ' &7- Staff: &f%staff%'
+        - ' &7- Duração: &f%duration%'
+        - ' &7- Data da Punição:'
+        - '   &f%date%'
+        - ' &7- Data de Expiração:'
+        - '   &f%expiry%'
+        - ''
+    NOTE:
+      Material: 'WRITABLE_BOOK'
+      Glowing: false
+      Name: '&a&lANOTAÇÃO&r &8[&7ID-%id%&8]'
+      Lore:
+        - ''
+        - '&f&lInformações:'
+        - ' &7- Mensagem: &f%reason%'
+        - ' &7- Staff: &f%staff%'
+        - ' &7- Data da Anotação:'
+        - '   &f%date%'
+        - ''
+    WARNING:
+      Material: 'PAPER'
+      Glowing: false
+      Name: '&e&lAVISO&r &8[&7ID-%id%&8]'
+      Lore:
+        - ''
+        - '&f&lInformações:'
+        - ' &7- Motivo: &f%reason%'
+        - ' &7- Staff: &f%staff%'
+        - ' &7- Data do Aviso:'
+        - '   &f%date%'
+        - ''
+    TEMP_WARNING:
+      Material: 'PAPER'
+      Glowing: false
+      Name: '&6&lAVISO TEMPORÁRIO&r &8[&7ID-%id%&8]'
+      Lore:
+        - ''
+        - '&f&lInformações:'
+        - ' &7- Motivo: &f%reason%'
+        - ' &7- Staff: &f%staff%'
+        - ' &7- Duração: &f%duration%'
+        - ' &7- Data do Aviso:'
+        - '   &f%date%'
+        - ' &7- Data de Expiração:'
+        - '   &f%expiry%'
+        - ''
+
+config-version: 1.3

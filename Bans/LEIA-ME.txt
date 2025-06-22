@@ -1,0 +1,16 @@
+BANS (LINK): https://aternos.org/addons/a/spigot/8695
+GUI (LINK): https://aternos.org/addons/a/spigot/58349
+FICHA (LINK): https://aternos.org/addons/a/spigot/94725
+
+
+COPIE O CONFIG-BANS.TXT PARA:
+plugins/AdvancedBan/config.yml
+
+E O TRADUÇÃO-BANS.TXT PARA:
+plugins/AdvancedBan/Messages.yml
+
+COPIE O CONFIG-GUI.TXT PARA:
+plugins/PunishmentGui/config.yml
+
+COPIE O CONFIG-FICHA.TXT PARA:
+plugins/Retribution/config.yml

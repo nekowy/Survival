@@ -1,0 +1,70 @@
+UseMySQL: false
+
+MySQL:
+  IP: localhost
+  DB-Name: database-name
+  Username: admin
+  Password: superSecret
+  Port: 3306
+  Properties: 'verifyServerCertificate=false&useSSL=false&useUnicode=true&characterEncoding=utf8'
+DetailedEnableMessage: true
+DetailedDisableMessage: true
+LockdownOnError: true
+DefaultReason: "Nenhuma"
+TimeDiff: 0
+MuteCommands:
+- 'me'
+- 'say'
+- 'action'
+- 'eaction'
+- 'describe'
+- 'edescribe'
+- 'eme'
+- 'w'
+- 'm'
+- 'pm'
+- 'whisper'
+- 'ewhisper'
+- 'emsg'
+- 'msg'
+- 'etell'
+- 'tell'
+- 'er'
+- 'r'
+- 'reply'
+- 'ereply'
+- 'ac'
+- 'eac'
+- 'amsg'
+- 'eamsg'
+- 'ehelpop'
+- 'p msg'
+ExemptPlayers:
+DateFormat: "dd.MM.yyyy-HH:mm"
+EnableAllPermissionNodes: false
+UUID-Fetcher:
+  Dynamic: true
+  Enabled: true
+  Intern: false
+  REST-API:
+    URL: "https://api.mojang.com/users/profiles/minecraft/%NAME%?at=%TIMESTAMP%"
+    Key: "id"
+  BackUp-API:
+    URL: "https://us.mc-api.net/v3/uuid/%NAME%"
+    Key: "uuid"
+WarnActions:
+  3: "kick %PLAYER% &c&oVocê recebeu seu 3° aviso!"
+  4: "tempban %PLAYER% 30m &c&oVocê recebeu seu 4° aviso!"
+  5: "tempban %PLAYER% 5h &c&oVocê recebeu seu 5° aviso!"
+  6: "tempban %PLAYER% 7d &c&oVocê recebeu seu 6° aviso!"
+  7: "tempban %PLAYER% 1mo &c&oVocê recebeu seu %COUNT%° aviso!"
+  10: "ban %PLAYER% &c&oExcesso de avisos - Vitalício"
+TempPerms:
+  1: 600
+  2: 3600
+  3: 43200
+
+Debug: false
+Log Purge Days: 10
+Disable Prefix: true
+Friendly Register Commands: false

@@ -1,0 +1,1058 @@
+enabled: true
+
+## Mensagens personalizáveis do plugin
+messages:
+  prefix: '&8(&aLucky&8)&f'
+  # Cores hexadecimais são suportadas desde o MC 1.16. Exemplo: 7FF55
+  # Em versões anteriores, as cores hexadecimais são substituídas pela cor mais próxima.
+  hex-color-codes: true
+  # Placeholders locais só podem ser usados na mensagem específica onde são definidos.
+  # Todos os placeholders globais estão listados mais abaixo.
+  command-messages:
+    help:
+      message: '%prefix% LUCKY AntiCheat %version% está rodando.'
+    reload:
+      # Placeholders locais: %time%
+      message: '%prefix% Configuração recarregada com sucesso &7(%time%ms)'
+    alerts:
+      toggled-on-message: '%prefix% Alertas ativados!'
+      toggled-off-message: '%prefix% Alertas desativados!'
+    tps:
+      # Placeholders locais: %tps%
+      message: '%prefix% TPS dos últimos 30 segundos: &f%tps%'
+    ping:
+      # Placeholders locais: %ping%, %connection-stability%
+      message: '%prefix% O ping de %name%&7 é &f%ping% &7(estabilidade &f%connection-stability%&7)'
+      connection-stability:
+        high: '&aalta&r'
+        medium: '&emédia&r'
+        low: '&cbaixa&r'
+    client:
+      # Placeholders locais: %client-brand%
+      message: '%prefix% O cliente de %name%&7 é &f%client-brand%'
+    cps:
+      # Placeholders locais: %cps%
+      message: '%prefix% O CPS de %name%&7 é &f%cps%'
+    checks:
+      # Placeholders locais: %checks%, %movement_checks%, %combat_checks%,
+      # %interaction_checks%, %inventory_checks%, %packet_checks%
+      message: '%prefix% Verificações: %checks%'
+  error-messages:
+    no-permission: '%prefix% Você não tem permissão para fazer isso.'
+    # Placeholders locais: %usage%
+    invalid-format: '%prefix% Uso correto: &7%usage%'
+
+## Notificações no jogo de violações e/ou punições
+alerts:
+  broadcast-violations:
+    enabled: true
+    message: '%prefix% %name% foi sinalizado por %check% (%vio%/%punishment-vio%)'
+    # Limita a frequência de alertas de violação para o mesmo jogador (em ms).
+    cooldown: 100
+    # Deixe em branco para não exibir texto ao passar o mouse.
+    on-hover: '&7Verificação: 7FF55%check% (%check-description%)%new-line%&7Mundo: 7FF55%world%%new-line%&7Coords:
+      7FF55%x% %y% %z%%new-line%&7Cliente: 7FF55%client-brand%'
+    # Placeholders locais: %teleport-location%
+    on-click: /light teleport %teleport-location%
+  broadcast-punishments:
+    enabled: true
+    message: '%prefix% %name% foi punido por %check%'
+    # Limita a frequência de alertas de punição para o mesmo jogador (em ms).
+    cooldown: 0
+    # Deixe em branco para não exibir texto ao passar o mouse.
+    on-hover: '&7Verificação: 7FF55%check% (%check-description%)%new-line%&7Mundo: 7FF55%world%%new-line%&7Coords:
+      7FF55%x% %y% %z%%new-line%&7Cliente: 7FF55%client-brand%'
+    # Placeholders locais: %teleport-location%
+    on-click: /light teleport %teleport-location%
+
+## Arquivo de Log
+log:
+  enabled: true
+  file: logs/%date-day%.log
+  # Placeholders globais
+  log-violations:
+    enabled: true
+    message: '(%date-sec%) %name% foi sinalizado [Verificação: %check% (%check-description%)] [Violações:
+      %vio%/%punishment-vio%] [TPS: %tps%] [Ping: %ping%ms (estabilidade %connection-stability%)]
+      [Cliente: %client-brand%] [Local: %world% %x% %y% %z%]'
+    # Limita a frequência de logs de violação para o mesmo jogador (em ms).
+    cooldown: 1000
+  log-punishments:
+    enabled: true
+    message: '(%date-sec%) %name% foi punido [Verificação: %check% (%check-description%)]
+      [Violações: %vio%/%punishment-vio%] [TPS: %tps%]  [Ping: %ping%ms (estabilidade
+      %connection-stability%)] [Cliente: %client-brand%] [Local: %world% %x% %y% %z%]'
+    # Limita a frequência de logs de punição para o mesmo jogador (em ms).
+    cooldown: 0
+
+## Notificações via Discord Webhook
+discord-webhook:
+  enabled: false
+  send-violations:
+    enabled: false
+    webhook-url: ''
+    message: '```%name% foi sinalizado por %check% (%check-description%) (%vio%/%punishment-vio%)```'
+    cooldown: 2000
+  send-punishments:
+    enabled: false
+    webhook-url: ''
+    message: '```%name% foi punido por %check% (%check-description%)```'
+    cooldown: 0
+
+## Permissões de Bypass
+permission:
+  per-check-bypass-permission: false
+  disable-all-bypass-permissions: false
+
+## Reset de Violações
+violation:
+  reset:
+    # As violações são resetadas após este intervalo (em segundos).
+    reset-interval: 300
+  cache:
+    enabled: true
+    # Salva as violações do jogador por X segundos após ele sair.
+    # Se '0', as violações são resetadas ao sair.
+    cache-duration: 180
+
+## Condições de lag para desativar as detecções
+lag-protection:
+  # Para as checagens se o servidor não responder por X ms.
+  tick-threshold: 1000
+  # Desativa as checagens ao entrar por X ms.
+  ignore-time-on-join: 3000
+  # Desativa as checagens ao se teleportar para chunks não carregados por X ms.
+  ignore-time-on-teleport: 3000
+  prevent-entering-into-unloaded-chucks: true
+  prioritize-accuracy: true
+
+## Suporte para Geyser (jogadores de Bedrock)
+geyser-hook:
+  enabled: true
+  floodgate:
+    enabled: true
+  uuid:
+    enabled: true
+  prefix:
+    enabled: true
+    prefix-string: .
+
+## Verificador de atualizações
+update-checker:
+  enabled: false
+  notification:
+    console:
+      enabled: false
+      message: '%prefix% LUCKY AntiCheat %latest-version% está disponível!'
+    on-join:
+      enabled: false
+      message: '%prefix% LUCKY AntiCheat %latest-version% está disponível!'
+      require-permission: true
+
+# Métricas anônimas para o BStats
+bstats:
+  enabled: true
+
+# API para desenvolvedores
+api:
+  enabled: true
+
+checks:
+  # Checagens de Movimento
+  movement:
+    flight:
+      flight_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 35
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cVoo detectado §7(Flight A)"
+        setback:
+          setback: false
+          setback-vio: 21
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      flight_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 35
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cVoo detectado §7(Flight B)"
+        setback:
+          setback: false
+          setback-vio: 21
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      flight_c:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 35
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cVoo detectado §7(Flight C)"
+        setback:
+          setback: false
+          setback-vio: 21
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    speed:
+      speed_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 30
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cVelocidade Anormal §7(Speed A)"
+        setback:
+          setback: false
+          setback-vio: 16
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      speed_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 35
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cVelocidade Anormal §7(Speed B)"
+        setback:
+          setback: false
+          setback-vio: 18
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      speed_c:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 40
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cVelocidade Anormal §7(Speed C)"
+        setback:
+          setback: false
+          setback-vio: 21
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      speed_d:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 30
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cVelocidade Anormal §7(Speed D)"
+        setback:
+          setback: false
+          setback-vio: 16
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      speed_e:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 30
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cVelocidade Anormal §7(Speed E)"
+        setback:
+          setback: false
+          setback-vio: 16
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      speed_f:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 50
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cVelocidade Anormal §7(Speed F)"
+        setback:
+          setback: false
+          setback-vio: 26
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    nofall:
+      nofall_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 25
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cSem Dano de Queda §7(NoFall A)"
+        setback:
+          setback: false
+          setback-vio: 17
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      nofall_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 30
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cSem Dano de Queda §7(NoFall B)"
+        setback:
+          setback: false
+          setback-vio: 22
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    jump:
+      jump_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 20
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cPulo Anormal §7(Jump A)"
+        setback:
+          setback: false
+          setback-vio: 7
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      jump_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 20
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cPulo Anormal §7(Jump B)"
+        setback:
+          setback: false
+          setback-vio: 11
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    liquidwalk:
+      liquidwalk_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 40
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cAndar sobre Líquidos §7(LiquidWalk A)"
+        setback:
+          setback: false
+          setback-vio: 21
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      liquidwalk_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 40
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cAndar sobre Líquidos §7(LiquidWalk B)"
+        setback:
+          setback: false
+          setback-vio: 21
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    fastclimb:
+      fastclimb_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 25
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cEscalada Rápida §7(FastClimb A)"
+        setback:
+          setback: false
+          setback-vio: 13
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    noslow:
+      noslow_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 25
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cSem Lentidão §7(NoSlow A)"
+        setback:
+          setback: false
+          setback-vio: 13
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    step:
+      step_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 5
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cSubida Anormal §7(Step A)"
+        setback:
+          setback: false
+          setback-vio: 4
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    boat:
+      boat_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 35
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cMovimento de Barco Anormal §7(Boat A)"
+        setback:
+          setback: false
+          setback-vio: 18
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    vehicle:
+      vehicle_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 35
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cMovimento de Veículo Anormal §7(Vehicle A)"
+        setback:
+          setback: false
+          setback-vio: 18
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    elytra:
+      elytra_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 40
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cVoo de Elytra Anormal §7(Elytra A)"
+        setback:
+          setback: false
+          setback-vio: 21
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      elytra_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 40
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cVoo de Elytra Anormal §7(Elytra B)"
+        setback:
+          setback: false
+          setback-vio: 21
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      elytra_c:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 15
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cVoo de Elytra Anormal §7(Elytra C)"
+        setback:
+          setback: false
+          setback-vio: 10
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    trident:
+      trident_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 5
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cImpulso de Tridente Anormal §7(Trident A)"
+        setback:
+          setback: false
+          setback-vio: 7
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+  # Checagens de Combate
+  combat:
+    killaura:
+      killaura_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 15
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cCombate Anormal §7(KillAura A)"
+        setback:
+          setback: false
+          setback-vio: 4
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      killaura_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 18
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cCombate Anormal §7(KillAura B)"
+        setback:
+          setback: false
+          setback-vio: 5
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      killaura_c:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 12
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cCombate Anormal §7(KillAura C)"
+        setback:
+          setback: false
+          setback-vio: 3
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      killaura_d:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 10
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cCombate Anormal §7(KillAura D)"
+        setback:
+          setback: false
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    reach:
+      reach_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 15
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cAlcance Anormal §7(Reach A)"
+        setback:
+          setback: false
+          setback-vio: 6
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      reach_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 12
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cAlcance Anormal §7(Reach B)"
+        setback:
+          setback: false
+          setback-vio: 4
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    criticals:
+      criticals_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 5
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cCríticos Anormais §7(Criticals A)"
+        setback:
+          setback: false
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      criticals_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 8
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cCríticos Anormais §7(Criticals B)"
+        setback:
+          setback: false
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    autoclicker:
+      autoclicker_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 15
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cCliques por Segundo Anormais §7(AutoClicker A)"
+        setback:
+          setback: false
+          setback-vio: 2
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      autoclicker_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 15
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cCliques por Segundo Anormais §7(AutoClicker B)"
+        setback:
+          setback: false
+          setback-vio: 2
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    velocity:
+      velocity_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 20
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cRedução de Knockback §7(Velocity A)"
+        setback:
+          setback: false
+          setback-vio: 7
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+  # Checagens de Interação
+  interaction:
+    airplace:
+      airplace_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 5
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cConstrução no Ar §7(AirPlace A)"
+        setback:
+          setback: false
+          setback-vio: 2
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    fastplace:
+      fastplace_a:
+        enabled: false
+        punishment:
+          punishable: true
+          punishment-vio: 5
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cConstrução Rápida §7(FastPlace A)"
+        setback:
+          setback: false
+          setback-vio: 2
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    blockplace:
+      blockplace_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 10
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cInteração de Bloco Anormal §7(BlockPlace A)"
+        setback:
+          setback: false
+          setback-vio: 6
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      blockplace_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 8
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cInteração de Bloco Anormal §7(BlockPlace B)"
+        setback:
+          setback: false
+          setback-vio: 3
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    ghostbreak:
+      ghostbreak_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 5
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cQuebra de Bloco Fantasma §7(GhostBreak A)"
+        setback:
+          setback: false
+          setback-vio: 2
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    fastbreak:
+      fastbreak_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 15
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cQuebra de Bloco Rápida §7(FastBreak A)"
+        setback:
+          setback: false
+          setback-vio: 8
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    blockbreak:
+      blockbreak_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 10
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cInteração de Bloco Anormal §7(BlockBreak A)"
+        setback:
+          setback: false
+          setback-vio: 6
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      blockbreak_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 8
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cInteração de Bloco Anormal §7(BlockBreak B)"
+        setback:
+          setback: false
+          setback-vio: 3
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    scaffold:
+      scaffold_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 15
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cConstrução Anormal §7(Scaffold A)"
+        setback:
+          setback: false
+          setback-vio: 6
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      scaffold_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 15
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cConstrução Anormal §7(Scaffold B)"
+        setback:
+          setback: false
+          setback-vio: 6
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+  # Checagens de Pacotes
+  packet:
+    morepackets:
+      morepackets_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 4
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cEnvio de Pacotes Anormal §7(MorePackets A)"
+        setback:
+          setback: false
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      morepackets_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 4
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cEnvio de Pacotes Anormal §7(MorePackets B)"
+        setback:
+          setback: false
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    timer:
+      timer_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 5
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cVelocidade de Jogo Anormal §7(Timer A)"
+        setback:
+          setback: false
+          setback-vio: 2
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      timer_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 5
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cVelocidade de Jogo Anormal §7(Timer B)"
+        setback:
+          setback: false
+          setback-vio: 2
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    badpackets:
+      badpackets_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 5
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cPacotes Inválidos §7(BadPackets A)"
+        setback:
+          setback: false
+          setback-vio: 4
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      badpackets_b:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 20
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cPacotes Inválidos §7(BadPackets B)"
+        setback:
+          setback: false
+          setback-vio: 19
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      badpackets_c:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 15
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cPacotes Inválidos §7(BadPackets C)"
+        setback:
+          setback: false
+          setback-vio: 14
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+      badpackets_d:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 10
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cPacotes Inválidos §7(BadPackets D)"
+        setback:
+          setback: false
+          setback-vio: 9
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+  # Checagens de Inventário
+  inventory:
+    sorting:
+      sorting_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 5
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cInteração de Inventário Anormal §7(Sorting A)"
+        setback:
+          setback: false
+          setback-vio: 2
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    itemswap:
+      itemswap_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 6
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cTroca de Item Anormal §7(ItemSwap A)"
+        setback:
+          setback: false
+          setback-vio: 3
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+  # Checagens de Jogador
+  player:
+    autobot:
+      autobot_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 5
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cComportamento de Bot Detectado §7(AutoBot A)"
+        setback:
+          setback: false
+          setback-vio: 2
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
+    skinblinker:
+      skinblinker_a:
+        enabled: true
+        punishment:
+          punishable: true
+          punishment-vio: 3
+          commands:
+          - "tempban %name% 1h §4LUCKY: §cModificação de Skin Anormal §7(SkinBlinker A)"
+        setback:
+          setback: false
+          setback-vio: 1
+        detection:
+          min-tps: 5.0
+          max-ping: 10000
+          java: true
+          bedrock: true
