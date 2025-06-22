@@ -272,4 +272,4 @@ panels:
         lore:
           - '&7Teleporta o jogador para você'
         commands:
-          - 'tp %cp-chosenPlayer% @s'
+          - 'tphere %cp-chosenPlayer%'
