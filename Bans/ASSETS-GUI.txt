@@ -81,7 +81,7 @@ panels:
           - ''
           - '&7Ofensa: &cmute &7por &a1 hora'
         commands:
-          - 'mute %cp-chosenPlayer% 1h Desordem no chat (Flood/Spam/Xingamentos)'
+          - 'tempmute %cp-chosenPlayer% 1h Desordem no chat (Flood/Spam/Xingamentos)'
       '13':
         material: clock
         name: '&cMute Médio (Chat)'
@@ -89,7 +89,7 @@ panels:
           - ''
           - '&7Ofensa: &cmute &7por &a1 dia'
         commands:
-          - 'mute %cp-chosenPlayer% 1d Desordem no chat (Flood/Spam/Xingamentos)'
+          - 'tempmute %cp-chosenPlayer% 1d Desordem no chat (Flood/Spam/Xingamentos)'
       '14':
         material: barrier
         name: '&4Mute Permanente (Chat)'
@@ -270,6 +270,6 @@ panels:
         material: player_head
         name: '&6Teleportar'
         lore:
-          - '&7Teleporta para o jogador'
+          - '&7Teleporta o jogador para você'
         commands:
-          - 'tp %cp-chosenPlayer%'
+          - 'tp %cp-chosenPlayer% @s'
