@@ -14,7 +14,8 @@ COPIE O CONFIG-GUI.TXT PARA:
 plugins/CommandPanels/config.yml
 
 COPIE O ASSETS-GUI.TXT PARA:
-plugins/CommandPanels/gui.yml
+plugins/CommandPanels/panels/gui.yml
+(apague os example e a template.yml)
 
 COPIE O CONFIG-FICHA.TXT PARA:
 plugins/Retribution/config.yml
