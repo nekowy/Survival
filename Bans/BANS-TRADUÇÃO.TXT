@@ -1,0 +1,331 @@
+General:
+  Prefix: "&5&lBAD&b&lLUCKY &8&l»"
+  NoPerms: "&aVocê não tem permissão para isso!"
+  LayoutNotFound: "&aNão existe um layout com o nome %NAME%"
+  TimeLayoutD: "%D%dia(s), %H%h, %M%min e %S%seg"
+  TimeLayoutH: "%H%hora(s), %M%min e %S%seg"
+  TimeLayoutM: "%M%min e %S%seg"
+  TimeLayoutS: "%S% segundos"
+  FailedFetch: "&aNão foi possível obter o UUID de %NAME%! Verifique o console para mais detalhes."
+
+
+Ban:
+  Usage: "&aUso &8» &7&o/ban (-s) [Nome] [Motivo/@Layout]"
+  Done: "&a&o%NAME% &7foi banido com sucesso!"
+  AlreadyDone: "&a&o%NAME% &7já está banido!"
+  Exempt: "&7Você não pode banir &a&o%NAME%"
+  Layout:
+  - '&5&lBAD&b&lLUCKY'
+  - '&7'
+  - '&7SUA CONTA FOI SUSPENSA &8- &4VITALÍCIO'
+  - '&7'
+  - "&aMotivo &8» &7%REASON%"
+  - '&7'
+  - '&8APELE sua punição em nosso YOUTUBE ou DISCORD'
+  - '&7'
+  - "&cYOUTUBE &8» &a&nhttps://www.youtube.com/@B4DLUCKY"
+  - "&9DISCORD &8» &a&nhttps://discord.gg/MxxG8dSFVU"
+  Notification:
+  - "&7A CONTA DE &a&o%NAME% &7FOI SUSPENSA"
+  - "&bAUTOR: &e&o%OPERATOR%"
+  - "&cMOTIVO: &o%REASON%"
+  UndoNotification: "&e&o%OPERATOR% &7desbaniu &a&o%NAME%"
+
+Ipban:
+  Usage: "&aUso &8» &7&o/banip (-s) [Nome/IP] [Motivo/@Layout]"
+  Layout:
+  - '&5&lBAD&b&lLUCKY'
+  - '&7'
+  - '&7SEU IP FOI SUSPENSO &8- &4VITALÍCIO'
+  - '&7'
+  - "&aMotivo &8» &7%REASON%"
+  - '&7'
+  - '&8APELE sua punição em nosso YOUTUBE ou DISCORD'
+  - '&7'
+  - "&cYOUTUBE &8» &a&nhttps://www.youtube.com/@B4DLUCKY"
+  - "&9DISCORD &8» &a&nhttps://discord.gg/MxxG8dSFVU"
+  Notification:
+  - "&7A CONTA E IP DE &a&o%NAME% &7FORAM SUSPENSOS"
+  - "&bAUTOR: &e&o%OPERATOR%"
+  - "&cMOTIVO: &o%REASON%"
+  IpNotCashed: "&aNão há um IP salvo para %NAME%!"
+
+Tempban:
+  Usage: "&aUso &8» &7&o/tempban (-s) [Nome] [Xmês/Xd/Xh/Xm/Xs/#LayoutDeTempo] [Motivo/@Layout]"
+  MaxDuration: "&aVocê não pode banir por mais de %MAX% segundos"
+  Layout:
+  - '&5&lBAD&b&lLUCKY'
+  - '&7'
+  - '&7SUA CONTA FOI SUSPENSA &8- &4TEMPORÁRIO'
+  - '&7'
+  - "&aMotivo &8» &7%REASON%"
+  - "&aDuração &8» &7%DURATION%"
+  - '&7'
+  - '&8APELE sua punição em nosso YOUTUBE ou DISCORD'
+  - '&7'
+  - "&cYOUTUBE &8» &a&nhttps://www.youtube.com/@B4DLUCKY"
+  - "&9DISCORD &8» &a&nhttps://discord.gg/MxxG8dSFVU"
+  Notification:
+  - "&7A CONTA DE &a&o%NAME% &7FOI SUSPENSA"
+  - "&bAUTOR: &e&o%OPERATOR%"
+  - "&cMOTIVO: &o%REASON%"
+  - "&a&oDURAÇÃO: &e&o%DURATION%"
+
+Tempipban:
+  Usage: "&aUso &8» &7&o/tempipban (-s) [Nome/IP] [Xmês/Xd/Xh/Xm/Xs/#LayoutDeTempo] [Motivo/@Layout]"
+  MaxDuration: "&aVocê não pode banir por mais de %MAX% segundos"
+  Layout:
+  - '&5&lBAD&b&lLUCKY'
+  - '&7'
+  - '&7SUA CONTA E IP FORAM SUSPENSOS &8- &4TEMPORÁRIO'
+  - '&7'
+  - "&aMotivo &8» &7%REASON%"
+  - "&aDuração &8» &7%DURATION%"
+  - '&7'
+  - '&8APELE sua punição em nosso YOUTUBE ou DISCORD'
+  - '&7'
+  - "&cYOUTUBE &8» &a&nhttps://www.youtube.com/@B4DLUCKY"
+  - "&9DISCORD &8» &a&nhttps://discord.gg/MxxG8dSFVU"
+  Notification:
+  - "&7A CONTA E IP DE &a&o%NAME% &7FORAM SUSPENSOS"
+  - "&bAUTOR: &e&o%OPERATOR%"
+  - "&cMOTIVO: &o%REASON%"
+  - "&a&oDURAÇÃO: &e&o%DURATION%"
+
+Mute:
+  Usage: "&aUso &8» &7&o/mute (-s) [Nome] [Motivo/@Layout]"
+  Done: "&a&o%NAME% &7foi silenciado com sucesso!"
+  AlreadyDone: "&a&o%NAME% &7já está silenciado!"
+  Exempt: "&7Você não pode silenciar &a&o%NAME%"
+  Layout:
+  - '%PREFIX% &7Você foi permanentemente silenciado'
+  - "&aMotivo &8» &7%REASON%"
+  Notification:
+  - "&a&o%NAME% &7FOI CALADO"
+  - "&bAUTOR: &e&o%OPERATOR%"
+  - "&cMOTIVO: &o%REASON%"
+  UndoNotification: "&e&o%OPERATOR% &7removeu o silenciamento de &a&o%NAME%"
+
+Tempmute:
+  Usage: "&aUso &8» &7&o/tempmute (-s) [Nome] [Xmês/Xd/Xh/Xm/Xs/#LayoutDeTempo] [Motivo/@Layout]"
+  MaxDuration: "&aVocê não pode silenciar por mais de %MAX% segundos"
+  Layout:
+  - '%PREFIX% &7Você está silenciado por %DURATION%'
+  - "&aMotivo &8» &7%REASON%"
+  Notification:
+  - "&a&o%NAME% &7FOI CALADO"
+  - "&bAUTOR: &e&o%OPERATOR%"
+  - "&cMOTIVO: &o%REASON%"
+  - "&a&oDURAÇÃO: &e&o%DURATION%"
+
+Warn:
+  Usage: "&aUso &8» &7&o/warn (-s) [Nome] [Motivo/@Layout]"
+  Done: "&a&o%NAME% &7foi avisado com sucesso!"
+  Exempt: "&7Você não pode avisar &a&o%NAME%"
+  Layout:
+  - '%PREFIX% &aSUA ORELHA FOI PUXADA'
+  - "&aMOTIVO &8» &7%REASON%"
+  - '&7TOTAL DE PUXÕES: &a&o%COUNT% &7!'
+  Notification:
+  - "&7A ORELHA DE &a&o%NAME% &7FOI PUXADA"
+  - "&bAUTOR: &e&o%OPERATOR%"
+  - "&cMOTIVO: &o%REASON%"
+
+Note:
+  Usage: "&aUso &8» &7&o/note (-s) [Nome] [Anotação]"
+  Done: "&7Uma nota foi adicionada para &a&o%NAME% &7com sucesso!"
+  Exempt: "&7Você não pode adicionar uma nota para &a&o%NAME%"
+  Notification:
+  - "&a&o%NAME% &&RECEBEU UM PRESENTE DESAGRADÁVEL"
+  - "&bAUTOR: &e&o%OPERATOR%"
+  - "&cMOTIVO: &o%REASON%"
+
+Tempwarn:
+  Usage: "&aUso &8» &7&o/tempwarn (-s) [Nome] [Xmês/Xd/Xh/Xm/Xs/#LayoutDeTempo] [Motivo/@Layout]"
+  MaxDuration: "&aVocê não pode avisar por mais de %MAX% segundos"
+  Layout:
+  - '%PREFIX% &aSUA ORELHA FOI PUXADA'
+  - "&aMOTIVO &8» &7%REASON%"
+  - '&7TOTAL DE PUXÕES: &a&o%COUNT% &7!'
+  - "&aEXPIRAÇÃO: &8» &7%DURATION%"
+  Notification:
+  - "&7A ORELHA DE &a&o%NAME% &7FOI PUXADA"
+  - "&bAUTOR: &e&o%OPERATOR%"
+  - "&cMOTIVO: &o%REASON%"
+
+Kick:
+  Usage: "&aUso &8» &7&o/kick (-s) [Nome] [Motivo/@Layout]"
+  Done: "&a&o%NAME% &7foi expulso com sucesso!"
+  NotOnline: "&a&o%NAME% &7não está online!"
+  Exempt: "&7Você não pode expulsar &a&o%NAME%"
+  Layout:
+  - '&5&lBAD&b&lLUCKY'
+  - '&7'
+  - '%PREFIX% &7VOCÊ FOI EXPULSO!'
+  - '&7'
+  - "&aMotivo &8» &7%REASON%"
+  - '&7'
+  Notification:
+  - "&a&o%NAME% &7foi expulso"
+  - "&bAUTOR: &e&o%OPERATOR%"
+  - "&cMOTIVO: &o%REASON%"
+
+
+UnBan:
+  Usage: "&aUso &8» &7&o/unban [Nome/IP]"
+  NotPunished: "&a&o%NAME% não está banido!"
+  Done: "&a&o%NAME% &7foi desbanido com sucesso!"
+  Notification: "&e&o%OPERATOR% &7desbaniu &a&o%NAME%"
+
+UnMute:
+  Usage: "&aUso &8» &7&o/unmute [Nome]"
+  NotPunished: "&a&o%NAME% não está silenciado!"
+  Done: "&a&o%NAME% &7teve o silenciamento removido com sucesso!"
+  Notification:
+  - "&a&o%NAME% &7FOI DESCALADO"
+  - "&bAUTOR: &e&o%OPERATOR%"
+
+UnWarn:
+  Usage: "&aUso &8» &7&o/unwarn [ID] ou /unwarn clear [Nome]"
+  NotFound: "&aNão foi possível encontrar o aviso #%ID%"
+  Done: "&7Aviso &a&o#%ID% &7removido com sucesso!"
+  Notification:
+  - "&7UM AVISO FOI REMOVIDO DE &a&o%NAME%"
+  - "&bAUTOR: &e&o%OPERATOR%"
+  Clear:
+    Empty: "&a&o%NAME% &7não possui avisos!"
+    Done: "&7Foram removidos &a&o%COUNT% &7avisos"
+
+UnNote:
+  Usage: "&aUso &8» &7&o/unnote [ID] ou /unnote clear [Nome]"
+  NotFound: "&aNão foi possível encontrar a nota #%ID%"
+  Done: "&7Nota &a&o#%ID% &7removida com sucesso!"
+  Notification:
+  - "&7O PRESENTE FOI REMOVIDO DE &a&o%NAME%"
+  - "&bAUTOR: &e&o%OPERATOR%"
+  Clear:
+    Empty: "&a&o%NAME% &7não possui notas!"
+    Done: "&7Foram removidas &a&o%COUNT% &7notas"
+
+UnPunish:
+  Usage: "&aUso &8» &7&o/unpunish [ID]"
+  NotFound: "&aNão foi possível encontrar a punição #%ID%"
+  Done: "&7Punição &a&o#%ID% &7removida com sucesso!"
+
+
+Banlist:
+  Usage: "&aUso &8» &7&o/banlist <Página>"
+  OutOfIndex: "&aNão existe a página %PAGE%!"
+  NoEntries: "&a&oNão há registros de banimentos"
+  Header:
+  - "%PREFIX% &7Lista de Banidos:"
+  - "&a&oJogador/IP &8| &e&oDuração &8| &7&oBanido por"
+  - "&a&oTipo &8> &7&oMotivo"
+  - "&7"
+  Entry:
+  - "&8[&e%DATE%&8]"
+  - "&a%NAME% &8| &e%DURATION% &8| &7%OPERATOR%"
+  - "&a%TYPE% &8> &7&o%REASON%"
+  - "&7"
+  Footer: "&7Página &e&o%CURRENT_PAGE% &7de &e&o%TOTAL_PAGES% &8| &7Banimentos listados: &e&o%COUNT%"
+  PageFooter: "&7Use &e&o/banlist %NEXT_PAGE% &7para ver a próxima página"
+
+History:
+  Usage: "&aUso &8» &7&o/history [Nome/IP] <Página>"
+  OutOfIndex: "&aNão existe a página %PAGE%!"
+  NoEntries: "&a&oNão foi possível encontrar o histórico de %NAME% :("
+  Header:
+  - "%PREFIX% &7Histórico de %NAME%:"
+  - "&a&oNome &8| &e&oDuração &8| &7&oOperador"
+  - "&a&oTipo &8> &7&oMotivo"
+  - "&7"
+  Entry:
+  - "&8[&e%DATE%&8]"
+  - "&a%NAME% &8| &e%DURATION% &8| &7%OPERATOR%"
+  - "&a%TYPE% &8> &7&o%REASON%"
+  - "&7"
+  Footer: "&7Página &e&o%CURRENT_PAGE% &7de &e&o%TOTAL_PAGES% &8| &7Registros totais: &e&o%COUNT%"
+  PageFooter: "&7Use &e&o/history %NAME% %NEXT_PAGE% &7para ver a próxima página"
+
+Warns:
+  Usage: "&aUso &8» &7&o/warns [Nome] <Página> &aou &7&o/warns <Página>"
+  OutOfIndex: "&aNão existe a página %PAGE%!"
+  NoEntries: "&a&o%NAME% ainda não tem avisos"
+  Header:
+  - "%PREFIX% &7Avisos de %NAME%:"
+  - "&a&oNome &8| &e&oDuração &8| &7&oAvisado por"
+  - "&a&o#ID &8> &7&oMotivo"
+  - "&7"
+  Entry:
+  - "&8[&e%DATE%&8]"
+  - "&a%NAME% &8| &e%DURATION% &8| &7%OPERATOR%"
+  - "&a&l#%ID% &8> &7&o%REASON%"
+  - "&7"
+  Footer: "&7Página &e&o%CURRENT_PAGE% &7de &e&o%TOTAL_PAGES% &8| &7Avisos ativos: &e&o%COUNT%"
+  PageFooter: "&7Use &e&o/warns %NAME% %NEXT_PAGE% &7para ver a próxima página"
+
+WarnsOwn:
+  OutOfIndex: "&aNão existe a página %PAGE%!"
+  NoEntries: "&a&oVocê ainda não tem avisos"
+  Header:
+    - "%PREFIX% &7Seus avisos:"
+    - "&e&oDuração &8| &7&oAvisado por"
+    - "&a&o#ID &8> &7&oMotivo"
+    - "&7"
+  Entry:
+    - "&8[&e%DATE%&8]"
+    - "&e%DURATION% &8| &7%OPERATOR%"
+    - "&a&l#%ID% &8> &7&o%REASON%"
+    - "&7"
+  Footer: "&7Página &e&o%CURRENT_PAGE% &7de &e&o%TOTAL_PAGES% &8| &7Avisos ativos: &e&o%COUNT%"
+  PageFooter: "&7Use &e&o/warns %NEXT_PAGE% &7para ver a próxima página"
+  
+Notes:
+  Usage: "&aUso &8» &7&o/notes [Nome] <Página> &aou &7&o/notes <Página>"
+  OutOfIndex: "&aNão existe a página %PAGE%!"
+  NoEntries: "&a&o%NAME% ainda não tem notas"
+  Header:
+    - "&7"
+    - "%PREFIX% &7Notas de %NAME%:"
+    - "&7"
+  Entry:
+    - "&7%DATE% &8| &7Por &o%OPERATOR% &7(&a#%ID%&7)"
+    - "&8> &e%REASON%"
+    - "&7"
+  Footer: "&7Página &e&o%CURRENT_PAGE% &7de &e&o%TOTAL_PAGES% &8| &7Notas: &e&o%COUNT%"
+  PageFooter: "&7Use &e&o/notes %NAME% %NEXT_PAGE% &7para ver a próxima página"
+
+NotesOwn:
+  OutOfIndex: "&aNão existe a página %PAGE%!"
+  NoEntries: "&a&oVocê ainda não tem notas"
+  Header:
+    - "&7"
+    - "%PREFIX% &7Suas notas:"
+    - "&7"
+  Entry:
+    - "&7%DATE% &8| &7Por &o%OPERATOR% &7(&a#%ID%&7)"
+    - "&8> &e%REASON%"
+    - "&7"
+  Footer: "&7Página &e&o%CURRENT_PAGE% &7de &e&o%TOTAL_PAGES% &8| &7Notas: &e&o%COUNT%"
+  PageFooter: "&7Use &e&o/notes %NEXT_PAGE% &7para ver a próxima página"
+
+ChangeReason:
+  Usage: "&aUso &8» &7&o/change-reason [ID ou ban/mute USUÁRIO] [Novo motivo]"
+  Done: "&7A punição &a&o#%ID% &7foi atualizada com sucesso!"
+  NotFound: "&aDesculpe, não conseguimos encontrar esta punição"
+
+Check:
+  Usage: "&aUso &8» &7&o/check [Nome]"
+  Header: "&7Verificando &e&o%NAME% &8(%CACHED%&8)"
+  UUID: "&aUUID &8» &7%UUID% &8(%CACHED%&8)"
+  IP: "&aIP &8» &7%IP% &8(%CACHED%&8)"
+  Geo: "&aPaís &8» &7%LOCATION%"
+  Mute: "&aSilenciado &8» &7%DURATION%"
+  MuteReason: "  &aMotivo &8» &7%REASON%"
+  Ban: "&aBanido &8» &7%DURATION%"
+  BanReason: "  &aMotivo &8» &7%REASON%"
+  Warn: "&aAvisos &8» &7%COUNT%"
+  Note: "&aNotas &8» &7%COUNT%"
+  NotFound: "&aDesculpe, não conseguimos encontrar %NAME%"
+  Cached: "&a&oem cache"
+  NotCached: "&a&onão está em cache"
