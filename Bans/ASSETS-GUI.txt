@@ -1,0 +1,275 @@
+panels:
+  template:
+    perm: admin
+    rows: '6'
+    title: '&8Punir %cp-chosenPlayer%'
+    empty: stained_glass
+    commands:
+      - mpabpgui %chosenPlayer%
+
+    item:
+      '0':
+        material: anvil
+        name: '&b&lOutras Infrações'
+        lore:
+          - '&7Punições para casos específicos.'
+      '2':
+        material: armor_stand
+        name: '&aAviso (Skin Invisível)'
+        lore:
+          - '&7Primeira ofensa.'
+        commands:
+          - 'warn %cp-chosenPlayer% Abuso de Personalização (Skin Invisível)'
+      '3':
+        material: armor_stand
+        name: '&cBan (Skin Invisível)'
+        lore:
+          - '&7Segunda ofensa.'
+          - '&7Ofensa: &cban &7por &a1 dia'
+        commands:
+          - 'tempban %cp-chosenPlayer% 1d Abuso de Personalização (Skin Invisível)'
+      '4':
+        material: bedrock
+        name: '&4&lBan Permanente por IP (Skin)'
+        lore:
+          - '&7Terceira ofensa ou recusa em trocar.'
+        commands:
+          - 'banip %cp-chosenPlayer% Abuso de Personalização (Skin Invisível)'
+      '6':
+        material: chest
+        name: '&eAbuso de Bugs'
+        lore:
+          - ''
+          - '&7Ofensa: &cban &7por &a3 dias'
+        commands:
+          - 'tempban %cp-chosenPlayer% 3d Abuso de Bugs'
+      '7':
+        material: bedrock
+        name: '&eAbuso de Bugs (Grave)'
+        lore:
+          - ''
+          - '&7Ofensa: &cban &7por &apermanente por ip'
+        commands:
+          - 'banip %cp-chosenPlayer% Abuso de Bugs'
+      '8':
+        material: bedrock
+        name: '&eOutros (Grave)'
+        lore:
+          - ''
+          - '&7Ofensa: &cban &7por &apermanente por ip'
+        commands:
+          - 'banip %cp-chosenPlayer% Não especificado'
+      '9':
+        material: paper
+        name: '&e&lOfensas de Chat'
+        lore:
+          - '&7Aplica-se a: Flood, Spam e Xingamentos.'
+          - '&7Razão: &fDesordem no chat'
+      '11':
+        material: writable_book
+        name: '&aAviso (Chat)'
+        lore:
+          - ''
+          - '&7Ofensa: &eAviso Verbal'
+          - '&7Clique para avisar o jogador.'
+        commands:
+          - 'warn %cp-chosenPlayer% Desordem no chat (Flood/Spam/Xingamentos)'
+      '12':
+        material: clock
+        name: '&eMute Leve (Chat)'
+        lore:
+          - ''
+          - '&7Ofensa: &cmute &7por &a1 hora'
+        commands:
+          - 'mute %cp-chosenPlayer% 1h Desordem no chat (Flood/Spam/Xingamentos)'
+      '13':
+        material: clock
+        name: '&cMute Médio (Chat)'
+        lore:
+          - ''
+          - '&7Ofensa: &cmute &7por &a1 dia'
+        commands:
+          - 'mute %cp-chosenPlayer% 1d Desordem no chat (Flood/Spam/Xingamentos)'
+      '14':
+        material: barrier
+        name: '&4Mute Permanente (Chat)'
+        lore:
+          - ''
+          - '&7Ofensa: &cmute permanente'
+          - '&cUse apenas em casos extremos e reincidentes.'
+        commands:
+          - 'mute %cp-chosenPlayer% Desordem no chat (Flood/Spam/Xingamentos)'
+      '18':
+        material: diamond_ore
+        name: '&c&lVantagem Indevida'
+        lore:
+          - '&7Aplica-se a: X-Ray, Clientes Modificados (Hacks).'
+          - '&7Razão: &fVantagem indevida'
+      '20':
+        material: iron_pickaxe
+        name: '&eBan Leve (Vantagem)'
+        lore:
+          - ''
+          - '&7Ofensa: &cban &7por &a1 dia'
+        commands:
+          - 'tempban %cp-chosenPlayer% 1d Vantagem Indevida (X-Ray/Hacks)'
+      '21':
+        material: diamond_pickaxe
+        name: '&cBan Médio (Vantagem)'
+        lore:
+          - ''
+          - '&7Ofensa: &cban &7por &a7 dias'
+        commands:
+          - 'tempban %cp-chosenPlayer% 7d Vantagem Indevida (X-Ray/Hacks)'
+      '22':
+        material: netherite_pickaxe
+        name: '&4Ban Grave (Vantagem)'
+        lore:
+          - ''
+          - '&7Ofensa: &cban &7por &a1 mês'
+        commands:
+          - 'tempban %cp-chosenPlayer% 1mo Vantagem Indevida (X-Ray/Hacks)'
+      '23':
+        material: bedrock
+        name: '&4&lBan Permanente por IP (Vantagem)'
+        lore:
+          - ''
+          - '&7Ofensa: &cban-ip permanente'
+          - '&cUse com certeza absoluta. Ação irreversível.'
+        commands:
+          - 'banip %cp-chosenPlayer% Vantagem Indevida (X-Ray/Hacks)'
+
+      # --- CATEGORIA: DESORDEM E ANTI-JOGO ---
+      '27':
+        material: tnt
+        name: '&6&lDesordem / Anti-Jogo'
+        lore:
+          - '&7Aplica-se a: Griefing, construções inadequadas,'
+          - '&7atrapalhar intencionalmente outros jogadores.'
+          - '&7Razão: &fDesordem/Baderna'
+      '29':
+        material: writable_book
+        name: '&aAviso (Desordem)'
+        lore:
+          - ''
+          - '&7Ofensa: &eAviso Verbal'
+        commands:
+          - 'warn %cp-chosenPlayer% Desordem/Baderna (Griefing/Troll)'
+      '30':
+        material: flint_and_steel
+        name: '&eBan Leve (Desordem)'
+        lore:
+          - ''
+          - '&7Ofensa: &cban &7por &a30 minutos'
+        commands:
+          - 'tempban %cp-chosenPlayer% 30m Desordem/Baderna (Griefing/Troll)'
+      '31':
+        material: lava_bucket
+        name: '&cBan Médio (Desordem)'
+        lore:
+          - ''
+          - '&7Ofensa: &cban &7por &a1 dia'
+        commands:
+          - 'tempban %cp-chosenPlayer% 1d Desordem/Baderna (Griefing/Troll)'
+      '32':
+        material: bedrock
+        name: '&4&lBan Permanente por IP (Desordem)'
+        lore:
+          - ''
+          - '&7Ofensa: &cban-ip permanente'
+          - '&cPara casos graves ou reincidentes de griefing/troll.'
+        commands:
+          - 'banip %cp-chosenPlayer% Desordem/Baderna (Griefing/Troll)'
+      '36':
+        material: skeleton_skull
+        name: '&c&lOfensas Pessoais e Graves'
+        lore:
+          - '&7Aplica-se a: Cyberbullying e Brigas.'
+      '38':
+        material: paper
+        name: '&aAviso (Cyberbullying)'
+        commands:
+          - 'warn %cp-chosenPlayer% Cyberbullying'
+      '39':
+        material: clock
+        name: '&eMute (Cyberbullying)'
+        lore:
+          - '&7Ofensa: &cmute &7por &a1 dia'
+        commands:
+          - 'tempmute %cp-chosenPlayer% 1d Cyberbullying'
+      '40':
+        material: barrier
+        name: '&4Mute Permanente (Cyberbullying)'
+        commands:
+          - 'mute %cp-chosenPlayer% Cyberbullying'
+      '41':
+        material: iron_sword
+        name: '&aAviso (Brigas)'
+        commands:
+          - 'warn %cp-chosenPlayer% Desordem/Baderna (Brigas)'
+      '42':
+        material: golden_sword
+        name: '&eMute Leve (Brigas)'
+        lore:
+          - '&7Ofensa: &cmute &7por &a30 minutos'
+        commands:
+          - 'tempmute %cp-chosenPlayer% 30m Desordem/Baderna (Brigas)'
+      '43':
+        material: golden_sword
+        name: '&eMute Pesado (Brigas)'
+        lore:
+          - '&7Ofensa: &cmute &7por &a1 dia'
+        commands:
+          - 'tempmute %cp-chosenPlayer% 1d Desordem/Baderna (Brigas)'
+
+      # --- CATEGORIA: NSFW ---
+      '45':
+        material: barrier
+        name: '&c&lNSFW & Ações'
+        lore:
+          - '&7Punições para conteúdo explícito.'
+          - '&8 Ações com o jogador'
+      '47':
+        material: map
+        name: '&4Mute Permanente (NSFW no Chat)'
+        lore:
+          - '&7Para conteúdo explícito no chat.'
+        commands:
+          - 'mute %cp-chosenPlayer% Conteúdo Explícito'
+      '48':
+        material: painting
+        name: '&cBan Grave (NSFW)'
+        lore:
+          - '&7Para skins, construções ou nick explícito.'
+          - '&7Ofensa: &cban &7por &a30 dias'
+        commands:
+          - 'tempban %cp-chosenPlayer% 30d Conteúdo Explícito'
+      '49':
+        material: bedrock
+        name: '&4&lBan Permanente por IP (NSFW)'
+        lore:
+          - '&cPara casos graves ou reincidentes.'
+        commands:
+          - 'banip %cp-chosenPlayer% Conteúdo Explícito'
+
+      '51':
+        material: BARRIER
+        name: '&cDesmutar'
+        lore:
+          - '&7Desmuta o jogador'
+        commands:
+          - 'unmute %cp-chosenPlayer%'
+      '52':
+        material: BARRIER
+        name: '&cDesbanir'
+        lore:
+          - '&7Desbane o jogador'
+        commands:
+          - 'unban %cp-chosenPlayer%'
+      '53':
+        material: player_head
+        name: '&6Teleportar'
+        lore:
+          - '&7Teleporta o jogador para você'
+        commands:
+          - 'tp %cp-chosenPlayer% @s'

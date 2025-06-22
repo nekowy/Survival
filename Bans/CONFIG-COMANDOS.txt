@@ -1,0 +1,15 @@
+prefix: "[&6LUCKY&r] "
+
+CustomCommands:
+  punir:
+    command: 'mpabpgui {args}'
+    message: 'Iniciando Punição'
+  menu:
+    command: 'mpabpgui {args}'
+    message: 'Iniciando Punição'
+  p:
+    command: 'mpabpgui {args}'
+    message: 'Iniciando Punição'
+
+
+Version: 3

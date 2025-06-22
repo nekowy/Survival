@@ -1,300 +1,79 @@
-# Lista de Placeholders Internos
-# {player} - Retorna o Nome do Jogador
-# {duration} - Retorna a Duração da Punição
-# MAIS EM BREVE
-
-# AVISO: O menu "Histórico" atualmente suporta apenas o LiteBans. Suporte para outros plugins será adicionado em futuras atualizações.
-
-guis:
-  main-gui-title: 'Punir {player}'
-  history-gui-title: 'Histórico de {player}'
-  punishments-gui-title: 'Punir {player}'
-  options-gui-title: 'Confirmar Punição'
-rows: 6 # Tamanho do Inventário (1 - 6)
-
-# Itens de preenchimento para decorar a GUI
-filler-item:
-  item: BLACK_STAINED_GLASS_PANE
-  name: '&r'
-
-items:
-  # --- CATEGORIA: OFENSAS DE CHAT (FLOOD, SPAM, XINGAMENTOS) ---
-  chatOffensesHeader:
-    slot: 9
-    item: PAPER
-    name: '&e&lOfensas de Chat'
-    lore:
-      - '&7Aplica-se a: Flood, Spam e Xingamentos.'
-      - '&7Razão: &fDesordem no chat'
-
-  chatWarn:
-    slot: 11
-    item: WRITABLE_BOOK
-    name: '&aAviso (Chat)'
-    lore:
-      - ""
-      - "&7Ofensa: &eAviso Verbal"
-      - "&7Clique para avisar o jogador."
-    command: "warn {player} Desordem no chat (Flood/Spam/Xingamentos)"
-
-  chatMuteB:
-    slot: 12
-    item: CLOCK
-    name: '&eMute Leve (Chat)'
-    lore:
-      - ""
-      - "&7Ofensa: &cmute &7por &a1 hora"
-    duration: "1h"
-    command: "mute {player} {duration} Desordem no chat (Flood/Spam/Xingamentos)"
-
-  chatMuteC:
-    slot: 13
-    item: CLOCK
-    name: '&cMute Médio (Chat)'
-    lore:
-      - ""
-      - "&7Ofensa: &cmute &7por &a1 dia"
-    duration: "1d"
-    command: "mute {player} {duration} Desordem no chat (Flood/Spam/Xingamentos)"
-
-  chatMuteW:
-    slot: 14
-    item: BARRIER
-    name: '&4Mute Permanente (Chat)'
-    lore:
-      - ""
-      - "&7Ofensa: &cmute permanente"
-      - "&cUse apenas em casos extremos e reincidentes."
-    command: "mute {player} Desordem no chat (Flood/Spam/Xingamentos)"
-
-  # --- CATEGORIA: VANTAGEM INDEVIDA (X-RAY, HACKS) ---
-  cheatingHeader:
-    slot: 18
-    item: DIAMOND_ORE
-    name: '&c&lVantagem Indevida'
-    lore:
-      - '&7Aplica-se a: X-Ray, Clientes Modificados (Hacks).'
-      - '&7Razão: &fVantagem indevida'
-
-  cheatBanB:
-    slot: 20
-    item: IRON_PICKAXE
-    name: '&eBan Leve (Vantagem)'
-    lore:
-      - ""
-      - "&7Ofensa: &cban &7por &a1 dia"
-    duration: "1d"
-    command: "tempban {player} {duration} Vantagem Indevida (X-Ray/Hacks)"
-
-  cheatBanC:
-    slot: 21
-    item: DIAMOND_PICKAXE
-    name: '&cBan Médio (Vantagem)'
-    lore:
-      - ""
-      - "&7Ofensa: &cban &7por &a7 dias"
-    duration: "7d"
-    command: "tempban {player} {duration} Vantagem Indevida (X-Ray/Hacks)"
-
-  cheatBanC2:
-    slot: 22
-    item: NETHERITE_PICKAXE
-    name: '&4Ban Grave (Vantagem)'
-    lore:
-      - ""
-      - "&7Ofensa: &cban &7por &a1 mês"
-    duration: "1mo"
-    command: "tempban {player} {duration} Vantagem Indevida (X-Ray/Hacks)"
-
-  cheatBanZ:
-    slot: 23
-    item: BEDROCK
-    name: '&4&lBan Permanente por IP (Vantagem)'
-    lore:
-      - ""
-      - "&7Ofensa: &cban-ip permanente"
-      - "&cUse com certeza absoluta. Ação irreversível."
-    command: "banip {player} Vantagem Indevida (X-Ray/Hacks)"
-
-  # --- CATEGORIA: DESORDEM E ANTI-JOGO (GRIEFING, TROLL) ---
-  disruptionHeader:
-    slot: 27
-    item: TNT
-    name: '&6&lDesordem / Anti-Jogo'
-    lore:
-      - '&7Aplica-se a: Griefing, construções inadequadas,'
-      - '&7atrapalhar intencionalmente outros jogadores.'
-      - '&7Razão: &fDesordem/Baderna'
-
-  griefWarn:
-    slot: 29
-    item: WRITABLE_BOOK
-    name: '&aAviso (Desordem)'
-    lore:
-      - ""
-      - "&7Ofensa: &eAviso Verbal"
-    command: "warn {player} Desordem/Baderna (Griefing/Troll)"
-
-  griefBanB:
-    slot: 30
-    item: FLINT_AND_STEEL
-    name: '&eBan Leve (Desordem)'
-    lore:
-      - ""
-      - "&7Ofensa: &cban &7por &a30 minutos"
-    duration: "30m"
-    command: "tempban {player} {duration} Desordem/Baderna (Griefing/Troll)"
-
-  griefBanC:
-    slot: 31
-    item: LAVA_BUCKET
-    name: '&cBan Médio (Desordem)'
-    lore:
-      - ""
-      - "&7Ofensa: &cban &7por &a1 dia"
-    duration: "1d"
-    command: "tempban {player} {duration} Desordem/Baderna (Griefing/Troll)"
-
-  griefBanZ:
-    slot: 32
-    item: BEDROCK
-    name: '&4&lBan Permanente por IP (Desordem)'
-    lore:
-      - ""
-      - "&7Ofensa: &cban-ip permanente"
-      - "&cPara casos graves ou reincidentes de griefing/troll."
-    command: "banip {player} Desordem/Baderna (Griefing/Troll)"
-
-  # --- CATEGORIA: OFENSAS GRAVES (BULLYING, NSFW, BRIGAS) ---
-  severeHeader:
-    slot: 36
-    item: SKELETON_SKULL
-    name: '&c&lOfensas Pessoais e Graves'
-    lore:
-      - '&7Aplica-se a: Cyberbullying e Brigas.'
-
-  # Punições para Cyberbullying
-  bullyWarn:
-    slot: 38
-    item: PAPER
-    name: '&aAviso (Cyberbullying)'
-    command: "warn {player} Cyberbullying"
-  bullyMute:
-    slot: 39
-    item: CLOCK
-    name: '&eMute (Cyberbullying)'
-    duration: "1d"
-    lore: ["&7Ofensa: &cmute &7por &a1 dia"]
-    command: "tempmute {player} {duration} Cyberbullying"
-  bullyMuteW:
-    slot: 40
-    item: BARRIER
-    name: '&4Mute Permanente (Cyberbullying)'
-    command: "mute {player} Cyberbullying"
-
-  # Punições para Brigas
-  fightWarn:
-    slot: 41
-    item: IRON_SWORD
-    name: '&aAviso (Brigas)'
-    command: "warn {player} Desordem/Baderna (Brigas)"
-  fightMute:
-    slot: 42
-    item: GOLDEN_SWORD
-    name: '&eMute Leve (Brigas)'
-    duration: "30m"
-    lore: ["&7Ofensa: &cmute &7por &a30 minutos"]
-    command: "tempmute {player} {duration} Desordem/Baderna (Brigas)"
-  fightBan:
-    slot: 42
-    item: GOLDEN_SWORD
-    name: '&eMute Pesado (Brigas)'
-    duration: "1d"
-    lore: ["&7Ofensa: &cmute &7por &a1 dia"]
-    command: "tempmute {player} {duration} Desordem/Baderna (Brigas)"
-
-  # Punições para NSFW
-  NSFWHeader:
-    slot: 45
-    item: BARRIER
-    name: '&c&lNSFW'
-    lore:
-      - '&7Punições para conteúdo explicito.'
-  nsfwMuteW:
-    slot: 47
-    item: MAP
-    name: '&4Mute Permanente (NSFW no Chat)'
-    lore: ["&7Para conteúdo explícito no chat."]
-    command: "mute {player} Conteúdo Explícito"
-  nsfwBanC:
-    slot: 48
-    item: PAINTING
-    name: '&cBan Grave (NSFW)'
-    duration: "30d"
-    lore: ["&7Para skins, construções ou nick explícito.", "&7Ofensa: &cban &7por &a30 dias"]
-    command: "tempban {player} {duration} Conteúdo Explícito"
-  nsfwBanZ:
-    slot: 49
-    item: BEDROCK
-    name: '&4&lBan Permanente por IP (NSFW)'
-    lore: ["&cPara casos graves ou reincidentes."]
-    command: "banip {player} Conteúdo Explícito"
-
-  # --- CATEGORIA: OUTRAS INFRAÇÕES ---
-  otherHeader:
-    slot: 0
-    item: ANVIL
-    name: '&b&lOutras Infrações'
-    lore:
-      - '&7Punições para casos específicos.'
-
-  skinAbuseWarn:
-    slot: 2
-    item: ARMOR_STAND
-    name: '&aAviso (Skin Invisível)'
-    lore: ["&7Primeira ofensa."]
-    command: "warn {player} Abuso de Personalização (Skin Invisível)"
-  skinAbuseBanC:
-    slot: 3
-    item: ARMOR_STAND
-    name: '&cBan (Skin Invisível)'
-    duration: "1d"
-    lore: ["&7Segunda ofensa.", "&7Ofensa: &cban &7por &a1 dia"]
-    command: "tempban {player} {duration} Abuso de Personalização (Skin Invisível)"
-  skinAbuseBanZ:
-    slot: 4
-    item: BEDROCK
-    name: '&4&lBan Permanente por IP (Skin)'
-    lore: ["&7Terceira ofensa ou recusa em trocar."]
-    command: "banip {player} Abuso de Personalização (Skin Invisível)"
-
-  bugAbuse:
-    slot: 6
-    item: CHEST
-    name: '&eAbuso de Bugs'
-    lore:
-      - ""
-      - "&7Ofensa: &cban &7por &a3 dias"
-    duration: "3d"
-    command: "tempban {player} {duration} Abuso de Bugs"
-
-  bugAbuseB:
-    slot: 7
-    item: BEDROCK
-    name: '&eAbuso de Bugs (Grave)'
-    lore:
-      - ""
-      - "&7Ofensa: &cban &7por &apermanente por ip"
-    command: "banip {player} Abuso de Bugs"
-  bugAbuseC:
-    slot: 8
-    item: BEDROCK
-    name: '&eOutros (Grave)'
-    lore:
-      - ""
-      - "&7Ofensa: &cban &7por &apermanente por ip"
-    command: "banip {player} Não especificado"
-
-alts:
-  # Comando para verificar contas alternativas do jogador (funciona no AdvancedBans)
-  command: "alts {player}"
+# |------------------------------------------------------------------------
+# |                 Arquivo de Configuração do CommandPanels
+# |                            Por RockyHawk v5.2
+# |                https://www.spigotmc.org/resources/67788/
+# |
+# | Traduzido para Português
+# |------------------------------------------------------------------------
+config:
+  refresh-panels: true
+  refresh-delay: 20
+  panel-blocks: true
+  hotbar-items: true
+  custom-commands: true
+  auto-register-commands: false
+  auto-update-panels: false
+  stop-sound: true
+  disabled-world-message: true
+  panel-snooper: false
+  enable-import-command: false
+  format:
+    tag: '&6[&bPainéisDeComandos&6]'
+    perms: '&cVocê não tem permissão.'
+    reload: '&aConfiguração recarregada.'
+    nopanel: '&cPainel não encontrado.'
+    noitem: '&cO painel não possui um item clicável.'
+    notitem: '&cJogador não encontrado.'
+    error: '&cErro encontrado na configuração.'
+    offline: Offline
+    offlineHeadValue: eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNmU1Mjg2YzQ3MGY2NmZmYTFhMTgzMzFjYmZmYjlhM2MyYTQ0MjRhOGM3MjU5YzQ0MzZmZDJlMzU1ODJhNTIyIn19fQ==
+    input: '&cSua entrada é muito longa!'
+    disabled: '&cEste recurso está desativado na configuração do plugin.'
+input:
+  input-cancel: cancelar
+  max-input-length: -1
+  input-message:
+  - '&aDigite a entrada para o comando'
+  - '&cDigite &4%cp-args% &cpara cancelar o comando'
+hexcodes:
+  start_tag: '&#'
+  end_tag: ''
+placeholders:
+  primary:
+    start: '%'
+    end: '%'
+  secondary:
+    start: '{'
+    end: '}'
+updater:
+  auto-update: false
+  update-checks: true
+purchase:
+  currency:
+    enable: true
+    success: '&aComprado com sucesso por $%cp-args%!'
+    failure: '&cVocê não tem dinheiro suficiente!'
+  data:
+    enable: true
+    success: '&aComprado com sucesso por $%cp-args%!'
+    failure: '&cVocê não tem fundos suficientes!'
+  tokens:
+    enable: true
+    success: '&aComprado com sucesso por %cp-args% Tokens!'
+    failure: '&cVocê não tem Tokens suficientes!'
+  coins:
+    enable: true
+    success: '&aComprado com sucesso por %cp-args% Moedas!'
+    failure: '&cVocê não tem Moedas suficientes!'
+  item:
+    enable: true
+    success: '&aVendeu com sucesso %cp-args%.'
+    failure: '&cVocê não tem itens suficientes!'
+  xp:
+    enable: true
+    success: '&aComprado com sucesso por %cp-args% de Experiência!'
+    failure: '&cVocê não tem experiência suficiente!'
+  permission:
+    enable: true
+    success: '&aVocê passou na verificação de permissão para "%cp-args%".'
+    failure: '&cVocê não tem permissões suficientes.'
