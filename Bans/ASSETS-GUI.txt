@@ -270,6 +270,6 @@ panels:
         material: player_head
         name: '&6Teleportar'
         lore:
-          - '&7Teleporta o jogador para você'
+          - '&7Teleporta para o jogador'
         commands:
-          - 'tp %cp-chosenPlayer% @s'
+          - 'tp %cp-chosenPlayer%'
